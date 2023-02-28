@@ -15,6 +15,14 @@ ext_modules.append(
             extra_compile_args = ["-mf16c", "-mavx2", "-mavx512f", "-mavx512bw", "-mavx512dq", "-mavx512vl", "-mlzcnt", "-fopenmp", "-Wdeprecated-declarations"]
         ),)
 
+'''
+ext_modules.append(
+        CppExtension('fpemu_cpp',
+            ['mpemu/pytquant/cpp/fpemu_impl.cpp'],
+            extra_compile_args = ["-mf16c", "-mavx2", "-mavx512f", "-mavx512bw", "-mavx512dq", "-mavx512vl", "-mlzcnt", "-fopenmp", "-Wdeprecated-declarations"]
+        ),)
+'''
+
 if torch.cuda.is_available():
    from torch.utils.cpp_extension import BuildExtension, CUDAExtension
    ext_modules.append(

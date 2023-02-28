@@ -101,6 +101,8 @@ kwargs = {'dtype': torch.float32,
           'device': device,
           'requires_grad': True}
 
+print(kwargs)
+
 input = torch.tensor(np.array([[ 57344.00     ,       -61440.0,        65504.0,         -500.0, 
                                  448.0        ,         -480.0,           30.0,          -31.0,
                                  26.0         ,           15.0, -7.6505613e-00,  5.9832452e-00,
